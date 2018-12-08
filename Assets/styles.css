@@ -3,6 +3,7 @@
     --fontColor: #dddddd;
     --pointerColor: #b10000;
     --radialColor: #b10000;
+    --radialHover: #8f0000;
 }
 html{
     background: var(--htmlColor);
@@ -23,6 +24,7 @@ body{
     position: absolute;
     top: 50%;
     left: 50%;
+    margin: -2rem -2rem;
     transform: translateX(-50%) translateY(-50%);
 }
 .pointer-vertical-left{
@@ -34,19 +36,41 @@ body{
     border-bottom: 15px solid transparent;
 }
 .radial-button{
-
+    border: none;
+    background: none;
+    color: var(--fontColor);
+    text-align: center;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    position: absolute;
+    background-color: var(--radialColor);
+    left: 50%;
+    top: 50%;
+    margin: -1rem -1rem;
+    z-index: 11;
 }
-.radial-wrapper{
-
+.radial-button:hover,
+.radial-button:focus,
+.radial-button:active{
+    background-color: var(--radialHover);
 }
-.radial-menu{
+.radial-wrap{
     background-color: var(--radialColor);
     width: 4rem;
     height: 4rem;
     border-radius: 2rem;
+    overflow: hidden;
+    z-index: 10;
+    transform: scale(0.5);
+    transition: all 0.3s ease;
+}
+.radial-openned{
+    border-radius: 50%;
+    transform: scale(1);
 }
 .radial-overlay{
-    
+
 }
 /* .pointer-vertical-right{
     position: absolute;
