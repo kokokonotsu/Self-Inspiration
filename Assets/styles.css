@@ -1,6 +1,8 @@
 :root{
     --htmlColor: #333333;
+    --fontColor: #dddddd;
     --pointerColor: #b10000;
+    --radialColor: #b10000;
 }
 html{
     background: var(--htmlColor);
@@ -13,6 +15,16 @@ body{
     margin: 0;
     position: relative;
 }
+.no-text-decoration{
+    text-decoration: none;
+    color: var(--fontColor);
+}
+.html-center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
 .pointer-vertical-left{
     position: absolute;
     width: 0;
@@ -20,6 +32,21 @@ body{
     border-top: 15px solid transparent;
     border-left: 20px solid var(--pointerColor);
     border-bottom: 15px solid transparent;
+}
+.radial-button{
+
+}
+.radial-wrapper{
+
+}
+.radial-menu{
+    background-color: var(--radialColor);
+    width: 4rem;
+    height: 4rem;
+    border-radius: 2rem;
+}
+.radial-overlay{
+    
 }
 /* .pointer-vertical-right{
     position: absolute;

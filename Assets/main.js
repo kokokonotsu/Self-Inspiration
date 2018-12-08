@@ -1,7 +1,7 @@
 document.onmousemove = trackCursorPos;
 function trackCursorPos(event) {
     var eventDoc, doc, body, pageX, pageY;
-    var pointerVerticalLeft = document.getElementById("pointer-vertical-left");
+    // var pointerVerticalLeft = document.getElementById("pointer-vertical-left");
     // var pointerVerticalRight = document.getElementById("pointer-vertical-right");
     // var pointerHorizontalTop = document.getElementById("pointer-horizontal-top");
     // var pointerHorizontalBottom = document.getElementById("pointer-horizontal-bottom");
@@ -17,7 +17,7 @@ function trackCursorPos(event) {
         event.pageY = event.clientY +
         (doc && doc.scrollTop || body && body.scrollTop || 0) - (doc && doc.clientTop || body && body.clientTop || 0);
     }
-    pointerVerticalLeft.style.top = event.pageY - 15 + "px";
+    // pointerVerticalLeft.style.top = event.pageY - 15 + "px";
     // pointerVerticalRight.style.top = event.pageY - 15 + "px";
     // pointerHorizontalTop.style.left = event.pageX - 15 + "px";
     // pointerHorizontalBottom.style.left = event.pageX - 15 + "px";
