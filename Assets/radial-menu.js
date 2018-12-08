@@ -15,22 +15,25 @@ function radialMenu (){
         if(!e) var e = window.event;
         e.stopPropagation();
 
-        if(!open){
-            openNav();
-        } else {
+        if(open){
             closeNav();
+        }
+        else if(!open){
+            openNav();
         }
     }
     function openNav(){
         open = true;
-        radialButton.innerHTML = "-";
+        radialButton.firstChild.innerHTML = "fullscreen_exit";
         overlay.classList.add("radial-overlay-on");
+        radialButton.classList.add("radial-opened-button");
         wrapper.classList.add("radial-opened");
     }
     function closeNav(){
         open = false;
-        radialButton.innerHTML = "+";
+        radialButton.firstChild.innerHTML = "fullscreen";
         overlay.classList.remove("radial-overlay-on");
+        radialButton.classList.remove("radial-opened-button");
         wrapper.classList.remove("radial-opened");
     }
     document.addEventListener("click", closeNav);
