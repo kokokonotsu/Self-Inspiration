@@ -2,12 +2,12 @@
     --htmlColor: #333333;
     --fontColor: #dddddd;
     --pointerColor: #b10000;
-    --radialColor: #b10000b2;
-    --radialHover: #8f0000;
+    --radialColor: #b10000;
+    --radialHover: #c40000;
     --radialActive: #c70000;
 }
 html{
-    background: var(--htmlColor);
+    background: radial-gradient(var(--htmlColor), black);
     height: 100%;
     width: 100%;
     font-size: 18px;
@@ -37,7 +37,7 @@ body{
     border-bottom: 15px solid transparent;
 }
 .radial-button{
-    border: 1px solid var(--fontColor);
+    border: none;
     background: none;
     display: flex;
     flex-direction: column;
@@ -54,7 +54,7 @@ body{
     top: 50%;
     margin: -2rem -2rem;
     z-index: 11;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease 0.45s;
     outline: none;
 }
 .radial-button:hover{
@@ -67,8 +67,22 @@ body{
     z-index: 10;
     margin: -15rem -15rem;
     overflow: hidden;
-    transform: scale(0.5);
-    transition: all 0.3s ease;
+    transform: scale(0.1);
+    transition: all 0.3s ease 0.3s;
+}
+.radial-wrap:after{
+    color: transparent;
+    content: "";
+    display: block;
+    font-size: 2em;
+    width: 7.4em;
+    height: 7.4em;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    margin: -3.7em 0 0 -3.7em;
+    border-radius: 50%;
+    z-index:10;
 }
 .radial-wrap li{
     position: absolute;
@@ -79,11 +93,11 @@ body{
     top: 50%;
     left: 50%;
     margin: -30rem 0 0 -30rem;
-    transition: border ease 0.3s;
+    transition: all ease 0.3s;
 }
 .radial-wrap li a{
     display: block;
-    font-size: 6rem;
+    font-size: 5.3rem;
     height: 30rem;
     width: 30rem;
     position: absolute;
@@ -93,8 +107,9 @@ body{
     border-radius: 50%;
     text-align: center;
     background: radial-gradient(transparent 35%, var(--radialColor) 35%);
-    transform: skew(-30deg) rotate(-60deg) scale(1);
-    transition: opacity 0.3s, color 0.3s;
+    transform: skew(-40deg) rotate(-65deg) scale(1);
+    transition: all 0.3s ease;
+    line-height: 1;
 }
 .radial-wrap li a i{
     font-size: 5rem;
@@ -104,32 +119,55 @@ body{
     opacity: 0.7;
 }
 .radial-wrap li:first-child{
-    transform: rotate(60deg) skew(30deg); 
+    transform: rotate(65deg) skew(40deg); 
+}.radial-wrap li:nth-child(2){
+    transform: rotate(65deg) skew(40deg); 
+}.radial-wrap li:nth-child(3){
+    transform: rotate(65deg) skew(40deg); 
+}.radial-wrap li:nth-child(4){
+    transform: rotate(65deg) skew(40deg); 
+}.radial-wrap li:nth-child(5){
+    transform: rotate(65deg) skew(40deg); 
+}.radial-wrap li:nth-child(6){
+    transform: rotate(65deg) skew(40deg); 
 }
-.radial-wrap li:nth-child(2){
-    transform: rotate(120deg) skew(30deg); 
+.radial-wrap.radial-opened li:first-child{
+    transform: rotate(65deg) skew(40deg); 
 }
-.radial-wrap li:nth-child(3){
-    transform: rotate(180deg) skew(30deg); 
+.radial-wrap.radial-opened li:nth-child(2){
+    transform: rotate(125deg) skew(40deg); 
 }
-.radial-wrap li:nth-child(4){
-    transform: rotate(240deg) skew(30deg); 
+.radial-wrap.radial-opened li:nth-child(3){
+    transform: rotate(185deg) skew(40deg); 
 }
-.radial-wrap li:nth-child(5){
-    transform: rotate(300deg) skew(30deg); 
+.radial-wrap.radial-opened li:nth-child(4){
+    transform: rotate(245deg) skew(40deg); 
 }
-.radial-wrap li:nth-child(6){
-    transform: rotate(360deg) skew(30deg); 
+.radial-wrap.radial-opened li:nth-child(5){
+    transform: rotate(305deg) skew(40deg); 
 }
-.radial-wrap li a:active{
+.radial-wrap.radial-opened li:nth-child(6){
+    transform: rotate(365deg) skew(40deg); 
+}
+.radial-wrap.radial-opened li a:active{
     background-color: var(--radialActive);
 }
-.radial-wrap li a:hover{
+.radial-wrap.radial-opened li a:hover{
     background:radial-gradient(transparent 35%, var(--radialHover) 35%);
 }
 .radial-opened{
     border-radius: 50%;
     transform: scale(1);
+    pointer-events: auto;
+    transition: all 0.3s ease;
+}
+.radial-opened li{
+    transition: all 0.3s ease 0.3s;
+}
+.radial-button-opened{
+    transition: all 0.3s ease 0.3s;
+    pointer-events: auto;
+    transform: scale(2);
 }
 .radial-overlay{
     width:100%;

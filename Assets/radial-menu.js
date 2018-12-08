@@ -26,14 +26,14 @@ function radialMenu (){
         open = true;
         radialButton.firstChild.innerHTML = "fullscreen_exit";
         overlay.classList.add("radial-overlay-on");
-        radialButton.classList.add("radial-opened-button");
+        radialButton.classList.add("radial-button-opened");
         wrapper.classList.add("radial-opened");
     }
     function closeNav(){
         open = false;
         radialButton.firstChild.innerHTML = "fullscreen";
         overlay.classList.remove("radial-overlay-on");
-        radialButton.classList.remove("radial-opened-button");
+        radialButton.classList.remove("radial-button-opened");
         wrapper.classList.remove("radial-opened");
     }
     document.addEventListener("click", closeNav);
