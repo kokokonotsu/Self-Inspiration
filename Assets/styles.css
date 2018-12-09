@@ -45,14 +45,14 @@ body{
     align-items: center;
     color: var(--fontColor);
     text-align: center;
-    height: 4rem;
-    width: 4rem;
+    height: 3rem;
+    width: 3rem;
     border-radius: 50%;
     position: absolute;
     background: radial-gradient(var(--radialColor), var(--radialDark));
-    right: 50%;
-    top: 50%;
-    margin: -2rem -2rem;
+    right: 10%;
+    bottom: 15%;
+    margin: -1.5rem -1.5rem;
     z-index: 11;
     transition: all 0.3s ease 0.45s;
     outline: none;
@@ -61,59 +61,57 @@ body{
     background: radial-gradient(var(--radialHover), var(--radialColor));
 }
 .radial-wrap{
-    width: 30rem;
-    height: 30rem;
+    position: absolute;
+    width: 10rem;
+    height: 10rem;
+    right: 10%;
+    bottom: 15%;
     border-radius: 50%;
     z-index: 10;
-    margin: -15rem -15rem;
+    margin: -5rem -5rem;
     overflow: hidden;
     transform: scale(0.1);
     transition: all 0.3s ease 0.3s;
 }
-.radial-wrap:after{
+/* .radial-wrap:after{
     color: transparent;
     content: "";
     display: block;
     font-size: 2em;
-    width: 7.4em;
-    height: 7.4em;
+    width: 2em;
+    height: 2em;
     position: absolute;
-    left: 50%;
-    top:50%;
-    margin: -3.7em 0 0 -3.7em;
+    right: 10%;
+    bottom: 15%;
+    margin: -1em 0 0 -1em;
     border-radius: 50%;
     z-index:10;
-}
+} */
 .radial-wrap li{
     position: absolute;
-    width: 30rem;
-    height: 30rem;
+    width: 10rem;
+    height: 10rem;
     transform-origin: 100% 100%;
     overflow: hidden;
-    top: 50%;
-    left: 50%;
-    margin: -30rem 0 0 -30rem;
+    right: 50%;
+    bottom: 50%;
+    margin: -10rem 0 0 -10rem;
     transition: all ease 0.3s;
 }
 .radial-wrap li a{
     display: block;
-    font-size: 5.3rem;
-    height: 30rem;
-    width: 30rem;
+    font-size: 2rem;
+    height: 10rem;
+    width: 10rem;
     position: absolute;
-    overflow: hidden;
-    top: 50%;
-    left: 50%;
+    /* overflow: hidden; */
+    right: -5rem;
+    bottom: -5rem;
     border-radius: 50%;
     text-align: center;
     background: radial-gradient(transparent 25%, var(--radialColor), var(--radialDark));
     transform: skew(-40deg) rotate(-65deg) scale(1);
     transition: all 0.3s ease;
-    line-height: 1;
-    outline: none;
-}
-.radial-wrap li a i{
-    font-size: 5rem;
 }
 .radial-wrap li a i{
     font-size: 2rem;
