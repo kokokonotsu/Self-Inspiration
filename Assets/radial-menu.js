@@ -4,7 +4,6 @@ function radialMenu (){
     overlay = document.getElementById("radial-overlay");
     var open = false;
     radialButton.addEventListener("click", handler, false);
-    radialButton.addEventListener("focus", handler, false);
     wrapper.addEventListener("click", rwHandle, false);
 
     function rwHandle(e){
