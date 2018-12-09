@@ -5,6 +5,7 @@
     --radialColor: #b10000;
     --radialHover: #c40000;
     --radialActive: #c70000;
+    --radialDark: #a10000;
 }
 html{
     background: radial-gradient(var(--htmlColor), black);
@@ -38,7 +39,6 @@ body{
 }
 .radial-button{
     border: none;
-    background: none;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -49,8 +49,8 @@ body{
     width: 4rem;
     border-radius: 50%;
     position: absolute;
-    background-color: var(--radialColor);
-    left: 50%;
+    background: radial-gradient(var(--radialColor), var(--radialDark));
+    right: 50%;
     top: 50%;
     margin: -2rem -2rem;
     z-index: 11;
@@ -58,7 +58,7 @@ body{
     outline: none;
 }
 .radial-button:hover{
-    background-color: var(--radialHover);
+    background: radial-gradient(var(--radialHover), var(--radialColor));
 }
 .radial-wrap{
     width: 30rem;
@@ -106,10 +106,11 @@ body{
     left: 50%;
     border-radius: 50%;
     text-align: center;
-    background: radial-gradient(transparent 35%, var(--radialColor) 35%);
+    background: radial-gradient(transparent 25%, var(--radialColor), var(--radialDark));
     transform: skew(-40deg) rotate(-65deg) scale(1);
     transition: all 0.3s ease;
     line-height: 1;
+    outline: none;
 }
 .radial-wrap li a i{
     font-size: 5rem;
@@ -153,7 +154,7 @@ body{
     background-color: var(--radialActive);
 }
 .radial-wrap.radial-opened li a:hover{
-    background:radial-gradient(transparent 35%, var(--radialHover) 35%);
+    background:radial-gradient(transparent 25%, var(--radialHover), var(--radialDark));
 }
 .radial-opened{
     border-radius: 50%;
@@ -168,6 +169,7 @@ body{
     transition: all 0.3s ease 0.3s;
     pointer-events: auto;
     transform: scale(2);
+    background: radial-gradient(var(--radialColor), var(--radialDark));
 }
 .radial-overlay{
     width:100%;
