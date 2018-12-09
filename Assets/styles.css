@@ -73,20 +73,20 @@ body{
     transform: scale(0.1);
     transition: all 0.3s ease 0.3s;
 }
-/* .radial-wrap:after{
+.radial-wrap:after{
     color: transparent;
     content: "";
     display: block;
     font-size: 2em;
-    width: 2em;
-    height: 2em;
+    width: 2.8em;
+    height: 2.8em;
     position: absolute;
-    right: 10%;
-    bottom: 15%;
-    margin: -1em 0 0 -1em;
+    top: 50%;
+    left: 50%;
+    margin: -1.4em 0 0 -1.4em;
     border-radius: 50%;
     z-index:10;
-} */
+}
 .radial-wrap li{
     position: absolute;
     width: 10rem;
@@ -100,7 +100,7 @@ body{
 }
 .radial-wrap li a{
     display: block;
-    font-size: 2rem;
+    font-size: 1rem;
     height: 10rem;
     width: 10rem;
     position: absolute;
@@ -114,7 +114,8 @@ body{
     transition: all 0.3s ease;
 }
 .radial-wrap li a i{
-    font-size: 2rem;
+    padding-top: 0.5rem;
+    font-size: 1.5rem;
     opacity: 0.7;
 }
 .radial-wrap li:first-child{
@@ -166,7 +167,7 @@ body{
 .radial-button-opened{
     transition: all 0.3s ease 0.3s;
     pointer-events: auto;
-    transform: scale(2);
+    /* transform: scale(2); */
     background: radial-gradient(var(--radialColor), var(--radialDark));
 }
 .radial-overlay{
